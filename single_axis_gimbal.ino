@@ -143,34 +143,20 @@ while (Serial.available()>0){
   Serial.read();
 }
 //print stuff
-Serial.print("Ax value: ");
-Serial.print(Ax, 2);
+Serial.print("Raw Gz value: ");
+Serial.print(Gyz, 2);
 Serial.print("   ");
 
-Serial.print("Ay value: ");
-Serial.print(Ay, 2);
+Serial.print("Gz in radians/s: ");
+Serial.print(Gz, 2);
 Serial.print("   ");
 
-Serial.print("Az value: ");
-Serial.print(Az, 2);
-Serial.print("   ");
-
-Serial.print("Gx value: ");
-Serial.print(Gx, 3);
-Serial.print("   ");
-
-Serial.print("Gy value: ");
-Serial.print(Gy, 3);
-Serial.print("   ");
-
-Serial.print("Gz value: ");
-Serial.print(gz, 3);
-Serial.print("   ");
-
-Serial.print("yaw rotation angle: ");
+Serial.print("MPU6050 angle: ");
 Serial.print(yawg);
-Serial.println();
+Serial.print("   ");
 
+Serial.print("Servo angle: ");
+Serial.println(servopos3);
 
 delay(25);
 }
